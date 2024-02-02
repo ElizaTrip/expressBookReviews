@@ -110,7 +110,7 @@ regd_users.delete("/auth/review/:isbn", (req, res) =>{
   for (const review in bookReviews){
       console.log(review);        if (review==username){
           delete bookReviews[review];
-          return res.status(400).json({message: "Deleted!"});
+          return res.status(200).json({message: "Deleted!"});
       }
 
   }
